@@ -1,0 +1,26 @@
+
+<div data-ng-show="!showadminpage">
+<div id="login">
+  <form class="login-form">
+      <input type="email" placeholder="Email" data-ng-model="email" required="true"/>
+    <input type="password" placeholder="Password" data-ng-model="password" required="true"/>
+    <input type="submit" value="Log in" data-ng-click="login()"/>
+  </form>
+</div>
+</div>
+<div id="admin" data-ng-show="showadminpage">
+    <form method="post" action="admins/upload" enctype="multipart/form-data">
+    <label>Title</label>
+    <input type="text" placeholder="Title" style="padding:3%" name="title"/>
+    <label>Description</label>
+    <textarea type="text" placeholder="description" name="description"></textarea>
+    <label>Thumbnail</label>
+    <input type="file" name="thumbnail"/>
+    <label>Large Image</label>
+    <input type="file" name="largeImage"/>
+    <label>Tags</label>
+    <input type="text" placeholder="Enter the Tag" style="padding:3%" name="tags"/>
+    <br/><br/>
+    <input type="submit" value="Submit"/>
+  </form>
+</div>
