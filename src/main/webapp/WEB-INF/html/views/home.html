@@ -1,4 +1,83 @@
+<div class="home navbar navbar-default navbar-fixed-top bs-docs-nav header" role="banner">
+    <div class="home-navigation pull-right" data-ng-init="tab='home'">
+          <nav style="display:initial" class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="javasript:void(0)" data-ng-click="tab='home'" class="anchorLink">Home</a></li>
+                <li><a href="javasript:void(0)" data-ng-click="tab='about'" class="anchorLink">About Us</a></li>
+                <li><a href="javasript:void(0)" data-ng-click="tab='contact'"class="anchorLink">Contact Us</a></li>
+            </ul> 
+        </nav>
+    </div>
+</div>
 
-<div id="elastic_grid_demo"></div>
+
+<div  data-ng-show="tab=='home'" class="main-home" style="margin-top:40px" id="elastic_grid_demo"></div>
+<!--    about starting     -->
+<div data-ng-show="tab=='about'" style="margin-top:40px">
+    <div class="col-md-3 col-sm-3">
+        <address>
+          <strong>Bujjibabu.</strong><br>
+          795 Folsom Ave, Suite 600<br>
+          San Francisco, CA 94107<br>
+          <abbr title="Phone">P:</abbr> +91-9533068603.
+          <a href="mailto:#">bujji404@gmail.com</a>
+        </address>
+    </div>
+</div>
+<!-- about ending -->
+
+
+<div data-ng-show="tab=='contact'" >
+    		<section id="section-contact" class="section appear clearfix">
+			<div class="container">
+				<div class="row mar-bot40">
+					<div class="col-md-offset-3 col-md-6">
+						<div class="section-header">
+							<h2 class="section-heading animated" data-animation="bounceInUp">Contact us</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<div class="cform" id="contact-form">
+							<div id="sendmessage">
+								 Your message has been sent. Thank you!
+							</div>
+							<form action="contact/contact.php" method="post" role="form" class="contactForm">
+							  <div class="form-group">
+								<label for="name">Your Name</label>
+								<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="maxlen:4" data-msg="Please enter at least 4 chars" />
+								<div class="validation"></div>
+							  </div>
+							  <div class="form-group">
+								<label for="name">Contact No</label>
+								<input type="text" name="name" class="form-control" id="phone" placeholder="Please Enter Phone umber" data-rule="maxlen:4" data-msg="Please enter 10 digit" />
+								<div class="validation"></div>
+							  </div>
+							  <div class="form-group">
+								<label for="email">Your Email</label>
+								<input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+								<div class="validation"></div>
+							  </div>
+							  <div class="form-group">
+								<label for="subject">Subject</label>
+								<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="maxlen:4" data-msg="Please enter at least 8 chars of subject" />
+								<div class="validation"></div>
+							  </div>
+							  <div class="form-group">
+								<label for="message">Message</label>
+								<textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us"></textarea>
+								<div class="validation"></div>
+							  </div>
+							  
+							  <button type="submit" class="btn btn-theme pull-left">SEND MESSAGE</button>
+							</form>
+
+						</div>
+					</div>
+					<!-- ./span12 -->
+				</div>
+			</div>
+		</section>
+</div>
 
 

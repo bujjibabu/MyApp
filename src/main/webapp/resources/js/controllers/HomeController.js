@@ -10,7 +10,7 @@
  * HomeController
  * @constructor
  */
-var HomeController = function($scope, $http) {  
+var HomeController = function($scope, $http, $location) {  
     $scope.fetchArtData = function() {
         $http.get('views/data.json').success(function(data){
             console.log('DATA : ', data);
@@ -30,4 +30,7 @@ var HomeController = function($scope, $http) {
         });
     };
     $scope.fetchArtData();
+    $scope.fnContact =function(){
+        $location.path('contact');
+    }
 };
